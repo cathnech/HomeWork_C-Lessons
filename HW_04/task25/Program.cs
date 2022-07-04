@@ -19,7 +19,6 @@ int a = Convert.ToInt32(Console.ReadLine()),
 
 try
 {
-    //int res = PowerFunction(a,b); 
     Console.WriteLine(PowerFunction(a,b));
 }
 catch (System.Exception)
