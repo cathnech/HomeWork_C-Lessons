@@ -7,9 +7,12 @@
 
 int[] CreateArr(int size){
     int[] array = new int[size];
+    var rmd = new Random();
+
     for (int i = 0; i < array.Length; i++)
     {
-        array[i] = Convert.ToInt32(Console.ReadLine());
+        array[i] = rmd.Next(); 
+        //array[i] = Convert.ToInt32(Console.ReadLine());
     }
     return array;
 }
@@ -24,9 +27,9 @@ void PrintArr(int[] arr){
 }
 
 
-Console.WriteLine("Enter a length of array:");
-int size = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine($"Enter {size} numbers for array:");
-
+// Console.WriteLine("Enter a length of array:");
+// int size = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine($"Enter {size} numbers for array:");
+int size = 8;
 PrintArr( CreateArr(size) );
 
