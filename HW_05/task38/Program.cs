@@ -3,18 +3,18 @@
 [3 7 22 2 78] -> 76
 */
 
-int[] CreateArr(int size){
-    int[] array = new int[size];
+double[] CreateArr(int size){
+    double[] array = new double[size];
     var rmd = new Random();
 
     for (int i = 0; i < array.Length; i++)
     {
-        array[i] = rmd.Next(); 
+        array[i] = Math.Round(rmd.NextDouble(),3); 
         
     }
     return array;
 }
-void PrintArr(int[] arr){
+void PrintArr(double[] arr){
     Console.Write("[");
     for (int i = 0; i < arr.Length-1; i++)
     {
@@ -22,8 +22,8 @@ void PrintArr(int[] arr){
     }
     Console.Write($"{arr[arr.Length-1]}]");
 }
-int CalcMinMax(int[] arr){
-    int[] mmarray = new int[2]{arr[0],arr[0]};
+double CalcMinMax(double[] arr){
+    double[] mmarray = new double[2]{arr[0],arr[0]};
     for (int i = 0; i < arr.Length; i++)
     {
         if (arr[i] > mmarray[1]) { 
@@ -33,10 +33,11 @@ int CalcMinMax(int[] arr){
             mmarray[0]=arr[i];
         }
     }
-    return mmarray[1]-mmarray[0];
+    return Math.Round(mmarray[1]-mmarray[0],3);
 }
 
-int size = 4;
-int[] arr = CreateArr(size);
+Console.WriteLine("Enter array's size:");
+int size = Convert.ToInt32(Console.ReadLine());
+double[] arr = CreateArr(size);
 PrintArr(arr);
 Console.WriteLine($"\nsum {CalcMinMax(arr)}");

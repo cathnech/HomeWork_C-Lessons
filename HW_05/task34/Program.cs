@@ -33,7 +33,8 @@ int CalcCount(int[] arr){
     return count;
 }
 
-int size = 4;
+Console.WriteLine("Enter array's size:");
+int size = Convert.ToInt32(Console.ReadLine());
 int[] arr = CreateArr(size);
 PrintArr(arr);
 Console.WriteLine($"\ncount {CalcCount(arr)}");

@@ -34,7 +34,8 @@ int CalcSum(int[] arr){
 
 
 
-int size = 4;
+Console.WriteLine("Enter array's size:");
+int size = Convert.ToInt32(Console.ReadLine());
 int[] arr = CreateArr(size);
 PrintArr(arr);
 
