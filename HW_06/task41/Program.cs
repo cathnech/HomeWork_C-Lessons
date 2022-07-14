@@ -27,7 +27,9 @@ int PosCount(int[] arr)
 }
 
 Console.WriteLine("Enter a length of array:");
-int res,
-    size = Convert.ToInt32(Console.ReadLine());
+int size = Convert.ToInt32(Console.ReadLine()),
+    res;
 Console.WriteLine($"Enter {size} numbers for array:");
-Console.WriteLine($"Count of positiv elements = {PosCount( CreateArr(size) )}");
+int[] ourarr = CreateArr(size);
+res = PosCount( ourarr );
+Console.WriteLine($"Count of positiv elements = {res}");
