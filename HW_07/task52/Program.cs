@@ -47,6 +47,6 @@ void ColumnAverage(int m, int n, int[,] array){
 Console.WriteLine("Enter 2d matrix size:");
 int m = Convert.ToInt32(Console.ReadLine()),
     n = Convert.ToInt32(Console.ReadLine()); 
-int[,] arr = CreateMatrix(m,n);
+int[,] arr = CreateMatrix(m,n); //оставила рандомно создаюшийся
 PrintMatrix(m,n,arr);
 ColumnAverage(m,n,arr);

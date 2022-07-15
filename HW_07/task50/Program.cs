@@ -42,12 +42,12 @@ void CheckEl(int m, int n, int[,] array, int mi, int nj){
     }
 
 }
-Console.WriteLine("Enter 2d matrix size:");
+Console.WriteLine("Enter 2d matrix size:"); //не совсем понятно жестко прописан массив или откуда он берется
 int m = Convert.ToInt32(Console.ReadLine()),
     n = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Which element do you want to find:");
 int ielem = Convert.ToInt32(Console.ReadLine()),
     jelem = Convert.ToInt32(Console.ReadLine()); 
-int[,] arr = CreateMatrix(m,n);
+int[,] arr = CreateMatrix(m,n); //оставила рандомно создаюшийся
 PrintMatrix(m,n,arr);
 CheckEl(m,n,arr,ielem,jelem);
