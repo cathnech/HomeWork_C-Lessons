@@ -6,18 +6,15 @@ M = 4; N = 8. -> 30
 */
 
 int SumNaturalNumbers(int m,int n){
-    if (m == n){ 
-        return m;
+    if (m < n){ 
+       return m+SumNaturalNumbers(m+1,n);
+    } 
+    if (m > n){
+        return n+SumNaturalNumbers(m,n+1);
     }
-    return m+SumNaturalNumbers(m+1,n);
+    return n;
 }
 Console.WriteLine("Enter M & N:"); 
 int m = Convert.ToInt32(Console.ReadLine()),
     n = Convert.ToInt32(Console.ReadLine());
-if (m>n){
-    Console.WriteLine("Error. M can't be bigger than N");
-} 
-else
-{
-    Console.WriteLine(SumNaturalNumbers(m,n));
-}
+Console.WriteLine(SumNaturalNumbers(m,n));
